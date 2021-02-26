@@ -1,0 +1,173 @@
+// для кнопок
+
+.btn
+  display: inline-block
+  vertical-align: middle
+  text-align: center
+
+  padding: 12px 30px
+  margin: 0
+
+  @include ft-main(12px, 1.5, #000)
+  text-transform: uppercase
+  letter-spacing: 0.13em
+  text-decoration: none
+
+  background-color: transparent
+  border: 1px solid #000
+  transition: all 0.3s ease
+
+  cursor: pointer
+
+  @media (min-width: $hoverWidth)
+    &:active
+      opacity: 0.5
+
+  &--dark
+    @media (min-width: $hoverWidth)
+      &:hover,
+      &:focus
+        background-color: #000
+        color: #fff
+
+  &--white
+    color: #fff
+
+    background-color: transparent
+    border-color: #fff
+
+    @media (min-width: $hoverWidth)
+      &:hover,
+      &:focus
+        background-color: #fff
+        color: #000
+
+  &--grey,
+  &--red
+    padding: 8px
+
+    font-size: 11px
+    line-height: 1.27
+    letter-spacing: 0.05em
+
+    border-color: transparent
+
+    @media (max-width: $desktop)
+      padding: 8px 5px
+
+      font-size: 10px
+
+    @media (max-width: $desktop)
+      font-size: 11px
+
+  &--grey
+    max-width: 207px
+
+    background-color: #ebebeb
+    background-image: linear-gradient(0.0deg, #dcdcdc -11%, #f2f2f2 51%, #dcdcdc 117%)
+
+    @media (max-width: $desktop)
+      @include adaptiv-value(max-width, 207, 190, 1200, 1024)
+
+    @media (max-width: $tablet)
+      max-width: 207px
+
+    @media (max-width: $landscapeOrientation)
+      max-width: 105px
+
+    @media (max-width: $portraitOrientation)
+      max-width: 50%
+      width: 50%
+      margin: 0
+
+  &--red
+    max-width: 157px
+
+    color: #fff
+
+    background-color: #c2242d
+    background-image: linear-gradient(0.0deg, #c2242d -11%, #cd2f38 64%, #cd2f38 40%, #c2242d 113%)
+
+    @media (max-width: $desktop)
+      @include adaptiv-value(max-width, 157, 140, 1200, 1024)
+
+    @media (max-width: $tablet)
+      max-width: 157px
+
+    @media (max-width: $landscapeOrientation)
+      max-width: 115px
+
+    @media (max-width: $portraitOrientation)
+      max-width: 50%
+      width: 50%
+      margin: 0
+
+  &--blue
+    @include ft-main(14px, 1.79, #fff)
+    letter-spacing: 0.2em
+
+    background-color: rgba(37,61,106,0.9)
+    border-color: transparent
+
+    @media (min-width: $hoverWidth)
+      &:hover,
+      &:focus
+        background-color: #c2242d
+
+.btn-mobile
+  display: flex
+  justify-content: center
+  align-items: center
+
+  width: 45px
+  height: 44px
+  margin: 0
+  padding: 0
+
+  background-color: #303066
+  border: none
+  transition: all 0.3s ease-in-out
+
+  outline: none
+
+  span,
+  span::before,
+  span::after
+    width: calc(100% - 14px)
+    height: 5px
+
+    background-color: #fff
+    border-radius: 2px
+    transition: all 0.3s ease-in-out
+
+  span::before,
+  span::after
+    position: absolute
+    left: 7px
+    right: 0
+
+    content: ""
+
+  span::before
+    top: 7px
+
+  span::after
+    bottom: 7px
+
+  &.active
+    background-color: transparent
+
+    span
+      background-color: transparent
+    span::before
+      transform: rotate(45deg)
+      width: 100%
+      left: 0
+      left: 0
+      top: 18px
+    span::after
+      transform: rotate(-45deg)
+      width: 100%
+      left: 0
+      left: 0
+      top: 18px

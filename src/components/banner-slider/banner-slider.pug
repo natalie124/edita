@@ -1,0 +1,27 @@
+.banner-slider
+  button.banner-slider__btn.banner-slider__btn--next(type="button", title="Следующий слайд")
+  button.banner-slider__btn.banner-slider__btn--prev(type="button", title="Предыдущий слайд")
+  ul.banner-slider__list.swiper-wrapper
+    li.banner-slider__item.banner.banner--big.swiper-slide
+      a.banner__img(href="#")
+        +picture-png-webp("banner-main", 770, 611, "Шубы на любой размер")
+      .banner__text.banner__text--right
+        a.banner__title(href="#") Шубы на&nbsp;любой размер
+        p.banner__description Индивидуальный пошив по модели клиента
+        a.banner__btn.btn.btn--dark(href="#") Закажите тут
+
+    li.banner-slider__item.banner.banner--big.swiper-slide
+      a.banner__img(href="#")
+        +picture-png-webp("banner-1", 770, 611, "Шубы на любой размер")
+      .banner__text
+        a.banner__title(href="#") Шубы на&nbsp;любой размер
+        p.banner__description Индивидуальный пошив по модели клиента
+        a.banner__btn.btn.btn--dark(href="#") Закажите тут
+
+    li.banner-slider__item.banner.banner--big.swiper-slide
+      a.banner__img(href="#")
+        +picture-png-webp("banner-2", 770, 611, "Шубы на любой размер")
+      .banner__text.banner__text--top
+        a.banner__title(href="#") Шубы на&nbsp;любой размер
+        p.banner__description Индивидуальный пошив по модели клиента
+        a.banner__btn.btn.btn--dark(href="#") Закажите тут

@@ -1,0 +1,191 @@
+.header-bottom
+  width: 100%
+  min-height: 56px
+
+  &__logo
+    position: absolute
+    bottom: 0
+    left: 0
+
+    @media (max-width: $tablet)
+      position: static
+
+  &__container
+    position: relative
+
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+    flex-wrap: wrap
+
+    @include adaptive-size(padding-left, 1170, 270)
+
+    background-color: #fff
+
+    @media (max-width: $desktop)
+      padding-left: 250px
+
+    @media (max-width: $laptop)
+      @include adaptiv-value(padding-left, 250, 220, 1024, 991)
+
+    @media (max-width: $tablet)
+      align-items: center
+
+      padding-left: 0
+
+  &__menu
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+    flex-grow: 2
+
+    margin: 0
+    padding: 0
+
+    list-style: none
+
+    @media (max-width: $desktop)
+      flex-grow: 0
+
+      @include adaptiv-value(max-width, 329, 190, 1200, 1024)
+
+    @media (max-width: $laptop)
+        max-width: 100%
+
+    @media (max-width: $tablet)
+      order: 1
+
+      width: calc(100% - 165px)
+      padding: 5px 20px 10px
+
+    @media (max-width: $portraitOrientation)
+      justify-content: center
+
+      width: 100%
+      padding: 10px 0
+
+  &__item
+    @include adaptive-size(margin-right, 334, 24)
+
+    @media (max-width: $desktop)
+      @include adaptive-size(margin-right, 320, 20)
+
+    @media (max-width: $portraitOrientation)
+      margin-right: 0
+
+  &__link
+    padding: 10px 0
+
+    @include ft-main-7(14px, 1, #000)
+    text-transform: uppercase
+    letter-spacing: 0.13em
+    text-decoration: none
+
+    @media (max-width: $landscapeOrientation)
+      padding: 15px 7.5px
+
+      font-size: 12px
+
+  &__btns
+    padding: 2.5px
+
+    @media (max-width: $tablet)
+      margin: 0 65px 0 auto
+
+    @media (max-width: $portraitOrientation)
+      display: flex
+      width: 100%
+      margin: 0
+      padding: 0
+
+  &__btn
+    margin: 2.5px
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+
+    padding-top: 20px
+    padding-bottom: 7px
+    @include adaptive-size(padding-left, 900, 20)
+    @include adaptive-size(padding-right, 900, 20)
+
+    @media (max-width: $desktop)
+      @include adaptiv-value(padding-right, 18, 0, 1200, 1024)
+      @include adaptiv-value(padding-left, 18, 10, 1200, 1024)
+
+    @media (max-width: $laptop)
+      width: 40px
+      height: 40px
+      padding: 10px
+
+    @media (max-width: $tablet)
+      order: 2
+
+      width: 165px
+      padding: 5px 20px 10px
+      height: auto
+
+    @media (max-width: $portraitOrientation)
+      position: absolute
+      top: 23px
+      right: 65px
+
+      width: 40px
+      height: 40px
+      padding: 10px
+
+  &__phone
+    display: inline-flex
+    justify-content: flex-start
+    align-items: center
+
+    margin-bottom: 10px
+
+    @include ft-main-3(15px, 0.87, #000)
+    text-decoration: none
+    letter-spacing: 0.01em
+
+    @media (max-width: $desktop)
+      @include adaptiv-value(font-size, 15, 14, 1200, 1024)
+
+    @media (max-width: $laptop)
+      width: 30px
+      height: 30px
+      margin-bottom: 0
+
+      font-size: 0
+
+    @media (max-width: $tablet)
+      width: auto
+      height: auto
+
+      font-size: 14px
+
+    @media (max-width: $portraitOrientation)
+      width: 35px
+      height: 35px
+
+      font-size: 0
+
+    img
+      width: 19px
+      height: 19px
+      margin-right: 5px
+
+      object-fit: contain
+
+      @media (max-width: $laptop)
+        width: 30px
+        height: 30px
+
+      @media (max-width: $tablet)
+        width: auto
+        height: auto
+
+      @media (max-width: $portraitOrientation)
+        width: 30px
+        height: 30px

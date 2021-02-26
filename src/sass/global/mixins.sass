@@ -1,0 +1,32 @@
+// fonts
+@mixin ft-main($size, $height, $color)
+  font-family: $ft-main
+  font-size: $size
+  line-height: $height
+  font-weight: 400
+  color: $color
+
+@mixin ft-main-3($size, $height, $color)
+  font-family: $ft-main
+  font-size: $size
+  line-height: $height
+  font-weight: 300
+  color: $color
+
+@mixin ft-main-7($size, $height, $color)
+  font-family: $ft-main
+  font-size: $size
+  line-height: $height
+  font-weight: 700
+  color: $color
+
+// для сетки
+@mixin columns($columns, $offset)
+  width: calc(100% / #{$totalColumns} * #{$columns} - #{$offset + px})
+
+// для адаптива
+@mixin adaptive-size($property, $basicSize, $targetSize)
+  #{$property}: calc((#{$targetSize} * 100%) / #{$basicSize})
+
+@mixin adaptiv-value($property, $startSize, $minSize, $maxWidthContainer, $minWidthContainer)
+  #{$property}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - #{$minWidthContainer + px}) / (#{$maxWidthContainer} - #{$minWidthContainer}))

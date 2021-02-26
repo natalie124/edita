@@ -1,0 +1,74 @@
+.service
+  width: 100%
+  margin-bottom: 25px
+
+  &__hall
+    background: url("../img/service-bg.jpg") no-repeat center / cover
+
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    max-width: 800px
+    width: 100%
+    min-height: 345px
+    margin: 0 auto
+    padding: 35px
+
+    @media (max-width: $laptop)
+      @include adaptiv-value(min-height, 345, 300, 1024, 991)
+
+    @media (max-width: $tablet)
+      min-height: 300px
+      @include adaptiv-value(padding-left, 35, 10, 991, 736)
+      @include adaptiv-value(padding-right, 35, 10, 991, 736)
+
+    @media (max-width: $landscapeOrientation)
+      padding-left: 10px
+      padding-right: 10px
+
+    &--left
+      margin-left: auto
+      margin-right: 0
+
+    &--right
+      margin-right: auto
+      margin-left: 0
+
+  &__text
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    margin: 0 0 32px
+    padding: 0
+    max-width: 500px
+    width: 100%
+
+    @media (max-width: $desktop)
+      @include adaptiv-value(font-size, 16, 14, 1200, 1024)
+
+    @media (max-width: $laptop)
+      @include adaptiv-value(font-size, 14, 12, 1024, 991)
+      @include adaptiv-value(margin-bottom, 30, 20, 1024, 991)
+
+    @media (max-width: $tablet)
+      margin-bottom: 15px
+
+      font-size: 10px
+
+    @media (max-width: $landscapeOrientation)
+      text-align: center
+
+  &__btn
+    margin: 10px 0
+
+  &__icon
+    width: 34px
+    height: 32px
+    margin-bottom: 32px
+
+    img
+      object-fit: contain

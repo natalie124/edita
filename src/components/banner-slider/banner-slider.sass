@@ -1,0 +1,68 @@
+.banner-slider
+  position: relative
+
+  overflow-x: hidden
+
+  &__list
+    display: flex
+
+    width: 100%
+    margin: 0
+    padding: 0
+
+    list-style: none
+
+  &__item
+    min-width: 100%
+
+  &__btn
+    position: absolute
+    right: 0
+    @include adaptive-size(top, 770, 292)
+    z-index: 10
+
+    width: 35px
+    height: 35px
+    margin: 0
+    padding: 0
+
+    border: none
+    background-color: #405986
+    transition: all 0.3s ease
+
+    cursor: pointer
+    outline: none
+
+    @media (min-width: $hoverWidth)
+      &:hover,
+      &:focus
+        background-color: #c2242d
+      &:active
+        opacity: 0.5
+
+    &::before
+      position: absolute
+      top: calc(50% - 7px)
+      left: calc(50% - 4px)
+
+      width: 12px
+      height: 12px
+
+      border-top: 2px solid #fff
+      border-left: 2px solid #fff
+      background-color: transparent
+
+      transform: rotate(-45deg)
+      transition: all 0.3s ease
+
+      content: ""
+
+    &--prev
+      right: 35px
+
+    &--next
+      background-color: #304770
+
+      &::before
+        left: calc(50% - 8px)
+        transform: rotate(135deg)

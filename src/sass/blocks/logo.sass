@@ -1,0 +1,33 @@
+.logo
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+  padding: 23px 38px
+
+  text-decoration: none
+
+  background-color: #fff
+
+  @media (max-width: $laptop)
+    @include adaptiv-value(padding-left, 38, 23, 1024, 991)
+    @include adaptiv-value(padding-right, 38, 23, 1024, 991)
+
+  @media (max-width: $tablet)
+    padding: 15px
+
+  @media (max-width: $portraitOrientation)
+    padding-left: 0
+
+  img
+    width: 159px
+    height: 35px
+    margin-bottom: 24px
+
+    object-fit: contain
+
+  span
+    @include ft-main(11px, 1, #848484)
+    text-transform: uppercase
+    letter-spacing: 0.2em

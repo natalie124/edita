@@ -1,0 +1,80 @@
+extend pug/layout
+
+block variables
+  - let title = "Главная";
+
+block content
+
+  h1.visually-hidden Меховая фабрика "Эдита"
+
+  include components/banners/banners
+  include components/advantages/advantages
+  include components/about-us/about-us
+
+  section.recommendations
+    +section-header("Рекомендуемый товар")
+    .container.container--np
+      .cards-slider
+        button.cards-slider__btn.cards-slider__btn--prev(type="button" title="Предыдущий слайд")
+        button.cards-slider__btn.cards-slider__btn--next(type="button" title="Cледующий слайд")
+        .cards-slider__container
+          ul.cards-slider__list.row.swiper-wrapper
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Полушубок из норки с капюшоном розовый на молнии без карманов", "card-1", "Норковые шубы")
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Полушубок из норки с капюшоном розовый на молнии без карманов", "card-2", "Кожаные куртки")
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Крашенный жилет из песца. Розовый", "card-3", "Жилеты из песца")
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Полушубок из норки с капюшоном розовый на молнии без карманов", "card-4", "Норковые шубы", "00001234", true)
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Полушубок из норки с капюшоном розовый на молнии без карманов", "card-2", "Кожаные куртки", "00001234", true, 1)
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Крашенный жилет из песца. Розовый", "card-5", "Жилеты из песца", "00001234", true, 2)
+
+  include components/service/service
+
+  section.discounts
+    +section-header("Товары со скидкой")
+    .container.container--np
+      .cards-slider
+        button.cards-slider__btn.cards-slider__btn--prev(type="button" title="Предыдущий слайд")
+        button.cards-slider__btn.cards-slider__btn--next(type="button" title="Cледующий слайд")
+        .cards-slider__container
+          ul.cards-slider__list.row.swiper-wrapper
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Полушубок из норки с капюшоном розовый на молнии без карманов", "card-4", "Норковые шубы", "00001234", true, 3)
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Полушубок из норки с капюшоном розовый на молнии без карманов", "card-2", "Кожаные куртки", "00001234", true, 1)
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Крашенный жилет из песца. Розовый", "card-5", "Жилеты из песца", "00001234", true, 2)
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Полушубок из норки с капюшоном розовый на молнии без карманов", "card-1", "Норковые шубы")
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Полушубок из норки с капюшоном розовый на молнии без карманов", "card-2", "Кожаные куртки")
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Крашенный жилет из песца. Розовый", "card-3", "Жилеты из песца")
+
+  include components/articles/articles
+
+  section.new-products
+    +section-header("Новинки")
+    .container.container--np
+      .cards-slider
+        button.cards-slider__btn.cards-slider__btn--prev(type="button" title="Предыдущий слайд")
+        button.cards-slider__btn.cards-slider__btn--next(type="button" title="Cледующий слайд")
+        .cards-slider__container
+          ul.cards-slider__list.row.swiper-wrapper
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Полушубок из норки с капюшоном розовый на молнии без карманов", "card-4", "Норковые шубы", "00001234", true)
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Полушубок из норки с капюшоном розовый на молнии без карманов", "card-2", "Кожаные куртки", "00001234", true, 1)
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Крашенный жилет из песца. Розовый", "card-5", "Жилеты из песца", "00001234", true, 2)
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Полушубок из норки с капюшоном розовый на молнии без карманов", "card-1", "Норковые шубы")
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Полушубок из норки с капюшоном розовый на молнии без карманов", "card-2", "Кожаные куртки")
+            li.cards-slider__item.column.column--4.column--m-lo-6.swiper-slide
+              +card("Крашенный жилет из песца. Розовый", "card-3", "Жилеты из песца")
+

@@ -1,0 +1,23 @@
+// шапка
+.header
+  background-color: #f8f8f8
+
+  @media (max-width: $portraitOrientation)
+    background-color: #fff
+
+  &__nav
+    position: relative
+
+  &__mobile-btn
+    position: absolute
+    z-index: 101
+    right: 50px
+    top: 28px
+
+    display: none
+
+    @media (max-width: $tablet)
+      display: flex
+
+    @media (max-width: $portraitOrientation)
+      right: 20px

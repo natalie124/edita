@@ -1,0 +1,57 @@
+mixin svg( name, width, height )
+  svg( width=("" + width) height=("" + height) aria-hidden="true" )
+    use( xlink:href=("img/sprite.svg#" + name) )
+
+mixin img-svg( name, width, height, alt )
+  img( src="img/" + name + ".svg" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin img-jpg( name, width, height, alt )
+  img( src="img/" + name + ".jpg" srcset="img/" + name + "@2x.jpg 2x" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin img-png( name, width, height, alt )
+  img( src="img/" + name + ".png" srcset="img/" + name + "@2x.png 2x" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin picture-jpg-webp( name, width, height, alt )
+  picture
+    source(type="image/webp" srcset="img/webp/" + name + ".webp, img/webp/" + name + "@2x.webp 2x, img/webp/" + name + "@3x.webp 3x")
+    img( src="img/" + name + ".jpg" srcset="img/" + name + "@2x.jpg 2x, img/" + name + "@3x.jpg 3x" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin picture-png-webp( name, width, height, alt )
+  picture
+    source(type="image/webp" srcset="img/webp/" + name + ".webp, img/webp/" + name + "@2x.webp 2x, img/webp/" + name + "@3x.webp 3x")
+    img( src="img/" + name + ".png" srcset="img/" + name + "@2x.png 2x, img/" + name + "@3x.png 3x" width=("" + width) height=("" + height) alt="" + alt )
+
+
+mixin section-header( title)
+  .section-header
+    .container
+      h2.section-header__title !{title}
+
+mixin card( title, img, category, article, stock, stickers)
+  .card
+    a.card__img(href="#")
+      +picture-png-webp("" + img, 370, 650, "" + title)
+    .card__info
+      a.card__category(href="#") !{category}
+      .card__description
+        a.card__title(href="#") !{title}
+        if (article)
+          p.card__article Арт. <span>!{article}</span>
+      if (stock)
+        .card__price.card__price--discount
+          span.card__old-price 25 000
+          span.card__new-price 22 000  <span class="rouble">a</span>
+      else
+        .card__price
+          span.card__new-price 22 000  <span class="rouble">a</span>
+    a.card__btn.btn.btn--blue(href="#") Подробнее
+    if (stickers=== 3)
+      .card__stickers
+        p.card__sticker.card__sticker--discount Скидка
+        p.card__sticker.card__sticker--new Новинка
+    if (stickers=== 2)
+      .card__stickers
+        p.card__sticker.card__sticker--discount Скидка
+    if (stickers=== 1)
+      .card__stickers
+        p.card__sticker.card__sticker--new Новинка

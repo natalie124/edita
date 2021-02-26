@@ -1,0 +1,23 @@
+article.articles
+  +section-header("Полезные статьи")
+  .container
+    .row
+      .column.column--6.column--m-po-12
+        .articles__item
+          a.articles__img(href="#")
+            +picture-jpg-webp("article-1", 570, 345, "Почему шуба не может стоить слишком дешего?")
+          .articles__content
+            .articles__title Почему шуба не может стоить слишком дешего?
+            a.articles__btn.btn.btn--white(href="#") Подробнее
+      .column.column--6.column--m-po-12
+        .articles__item.articles__item--white
+          a.articles__img(href="#")
+            +picture-jpg-webp("article-2", 570, 345, "Почему шуба не может стоить слишком дешего?")
+          .articles__content
+            .articles__title Почему шуба не может стоить слишком дешего?
+            a.articles__btn.btn.btn--dark(href="#") Подробнее
+    .row
+      .column
+        .articles__see-more
+          a.articles__see-more-link(href="#") Читать больше статей
+

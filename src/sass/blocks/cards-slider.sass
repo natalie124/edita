@@ -1,0 +1,86 @@
+// слайдер с карточками
+.cards-slider
+  position: relative
+
+  padding: 0 50px
+  margin-bottom: 65px
+
+  overflow-x: hidden
+
+  @media (max-width: $laptop)
+    @include adaptiv-value(margin-bottom, 65, 30, 1024, 991)
+
+  @media (max-width: $tablet)
+    margin-bottom: 25px
+    padding: 0 30px
+
+  &__container
+    position: relative
+
+    overflow-x: hidden
+
+  &__btn
+    position: absolute
+    top: 50%
+
+    width: 50px
+    height: 300px
+    padding: 0
+    margin: 0
+
+    background-color: #888
+    border: none
+    transform: translateY(-50%)
+    transition: all 0.3s ease
+
+    cursor: pointer
+
+    @media (max-width: $tablet)
+      width: 30px
+
+    @media (min-width: $hoverWidth)
+      &:hover,
+      &:focus
+        background-color: #304770
+      &:active
+        background-color: #405986
+
+
+    &::before
+      position: absolute
+      top: calc(50% - 7px)
+      left: calc(50% - 4px)
+
+      width: 12px
+      height: 12px
+
+      border-top: 2px solid #fff
+      border-left: 2px solid #fff
+      background-color: transparent
+
+      transform: rotate(-45deg)
+      transition: all 0.3s ease
+
+      content: ""
+
+    &--prev
+      left: 0
+
+    &--next
+      right: 0
+
+
+      &::before
+        left: calc(50% - 8px)
+        transform: rotate(135deg)
+
+  &__list
+    flex-wrap: nowrap
+
+    padding: 0
+    margin: 0
+    list-style: none
+
+  &__item
+    flex-shrink: 0
+    margin: 0

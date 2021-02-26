@@ -1,0 +1,51 @@
+header.header
+  nav.header__nav
+    button.header__mobile-btn.btn-mobile.js-mobile-btn(type="button" title="Меню")
+      span
+    .header__top.header-top
+      .container
+        .header-top__container
+          ul.header-top__menu.js-mobile-menu
+            li.header-top__item
+              a.header-top__link(href="#")
+                +picture-png-webp("icon-delivery", 24, 24, "Условия доставки")
+                | Условия доставки
+            li.header-top__item
+              a.header-top__link(href="#")
+                +picture-png-webp("icon-payment", 22, 22, "Условия оплаты")
+                | Условия оплаты
+            li.header-top__item
+              a.header-top__link(href="#")
+                +picture-png-webp("icon-reviews", 24, 24, "Отзывы клиентов")
+                | Отзывы клиентов
+            li.header-top__item
+              a.header-top__link(href="#")
+                +picture-png-webp("icon-questions", 21, 21, "Вопрос-ответ")
+                | Вопрос-ответ
+            li.header-top__item
+              a.header-top__link(href="#")
+                +picture-png-webp("icon-contacts", 19, 18, "Контакты")
+                | Контакты
+
+    .header__bottom.header-bottom
+      .container
+        .header-bottom__container
+          a.header-bottom__logo.logo(href="main.html")
+            +picture-png-webp("logo", 159, 35, "Эдита")
+            span Меховая фабрика
+          ul.header-bottom__menu
+            li.header-bottom__item
+              a.header-bottom__link(href="#") Женщинам
+            li.header-bottom__item
+              a.header-bottom__link(href="#") Мужчинам
+            li.header-bottom__item
+              a.header-bottom__link(href="#") Детям
+          .header-bottom__btns
+            button.header-bottom__btn.btn.btn--grey(type="button") Бесплатная консультация модельера
+            a.header-bottom__btn.btn.btn--red(href="order.html") Закажите шубу по вашим меркам
+          .header-bottom__contacts
+            a.header-bottom__phone(href="tel:+79283471718")
+              +picture-png-webp("icon-phone", 19, 19)
+              | +7 928 347 17 18
+
+

@@ -1,0 +1,35 @@
+.banners
+  .container
+    .row
+      .column.column--8.column--m-lo-12
+        include ../banner-slider/banner-slider
+      .column.column--4.column--m-lo-12
+        .banners__group
+          .banner.banner--group
+            a.banner__img(href="#")
+              +picture-png-webp("banner-1", 370, 290, "Норковые шубы")
+            .banner__text
+              a.banner__title(href="#") Норковые шубы
+              a.banner__link(href="#") Выберите свою
+
+          .banner.banner--group
+            a.banner__img(href="#")
+              +picture-png-webp("banner-2", 370, 290, "Шубы из астрагана")
+            .banner__text.banner__text--top
+              a.banner__title(href="#") Шубы из астрагана
+              a.banner__link(href="#") Купите со скидкой
+
+    .row
+      .column.column--4.column--m-lo-6.column--m-po-12
+        .banner
+          a.banner__img(href="#")
+            +picture-png-webp("banner-3", 370, 290, "Шубы из каракуля")
+          .banner__text
+            a.banner__title(href="#") Шубы из каракуля
+
+      .column.column--8.column--m-lo-6.column--m-po-12
+        .banner.banner--middle
+          a.banner__img(href="#")
+            +picture-png-webp("banner-4", 770, 290, "Мужские кожаные куртки")
+          .banner__text.banner__text--top
+            a.banner__title(href="#") Мужские кожаные куртки

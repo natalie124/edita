@@ -1,0 +1,207 @@
+html
+  box-sizing: border-box
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+body
+  min-width: $width-min
+  margin: 0
+  padding: 0
+
+  @include ft-main(16px, 1.56, #000)
+  letter-spacing: 0.015em
+
+img
+  vertical-align: middle
+
+  max-width: 100%
+
+.visually-hidden
+  position: absolute
+
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+
+  white-space: nowrap
+
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+.wrapper
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+
+  width: 100%
+  min-height: 100vh
+
+header,
+main
+  width: 100%
+
+footer
+  width: 100%
+  margin-top: auto
+
+// для сетки
+
+.container
+  max-width: 1270px
+  width: 100%
+  margin: 0 auto
+  padding: 0 50px
+
+  @media (max-width: $tablet)
+    padding: 0 30px
+
+  @media (max-width: $portraitOrientation)
+    padding: 0 20px
+
+  &--np
+   padding: 0
+
+.row
+  display: flex
+  flex-wrap: wrap
+
+  margin: 0 calc(-30px / 2)
+
+  @media (max-width: $tablet)
+    margin: 0 calc(-20px / 2)
+
+  &--nm
+    margin: 0
+
+.column
+  width: calc(100% - 30px)
+  margin: 0 15px
+
+  @media (max-width: $tablet)
+    width: calc(100% - 20px)
+    margin: 0 10px
+
+  &--nm-6
+    width: 50%
+    margin: 0
+
+  &--2
+    @include columns(2, 30)
+
+    @media (max-width: $tablet)
+      @include columns(2, 20)
+
+  &--2-4
+    @include columns(2.4, 30)
+
+    @media (max-width: $tablet)
+      @include columns(4, 20)
+
+  &--3
+    @include columns(3, 30)
+
+    @media (max-width: $tablet)
+      @include columns(3, 20)
+
+  &--4
+    @include columns(4, 30)
+
+    @media (max-width: $tablet)
+      @include columns(4, 20)
+
+  &--6
+    @include columns(6, 30)
+
+    @media (max-width: $tablet)
+      @include columns(6, 20)
+
+  &--8
+    @include columns(8, 30)
+
+    @media (max-width: $tablet)
+      @include columns(8, 20)
+
+  &--9
+    @include columns(9, 30)
+
+    @media (max-width: $tablet)
+      @include columns(9, 20)
+
+
+  @media (max-width: $tablet)
+    &--t-12
+      width: calc(100% - 20px)
+    &--t-3
+      @include columns(3, 20)
+
+  @media (max-width: $landscapeOrientation)
+    &--m-lo-row
+      display: flex
+      flex-wrap: wrap
+
+      width: calc(100% - 20px)
+
+    &--m-lo-12
+      width: calc(100% - 20px)
+
+    &--m-lo-8
+      @include columns(8, 20)
+
+    &--m-lo-6
+      @include columns(6, 20)
+
+    &--m-lo-4
+      @include columns(4, 20)
+
+  @media (max-width: $portraitOrientation)
+    &--m-po-12
+      width: calc(100% - 20px)
+
+    &--m-po-6
+      @include columns(6, 20)
+
+// для текста
+
+.rouble
+  font-family: ALSRubl
+
+.t-uppercase
+  text-transform: uppercase
+
+.t-fs-14
+  font-size: 14px
+  line-height: 1.79
+
+.t-fs-24
+  font-size: 24px
+  line-height: 1.25
+
+.t-light
+  font-weight: 300
+
+.t-white
+  color: #fff
+
+.t-mb-32
+  margin-bottom: 32px
+
+@media (max-width: $landscapeOrientation)
+  .fs-m-lo-18
+    font-size: 18px
+
+// для фона
+
+.bg-dark
+  background-color: #13111c
+
+.bg-grey
+  background-color: #dcdcdc
+  background-image: linear-gradient(-56.0deg, #dcdcdc 1%, #f5f5f5 62%, #f5f5f5 37%, #dcdcdc 98%)
+
